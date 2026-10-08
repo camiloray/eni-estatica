@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Escuela Nacional de Instructores ENI - SENA. Consulta las convocatorias de capacitación vigentes." />
+  <title>ENI | Escuela Nacional de Instructores - SENA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Inicio ENI SENA">
+        <span class="brand-logo" aria-hidden="true">ENI</span>
+        <span class="brand-text">
+          <strong>Escuela Nacional de Instructores</strong>
+          <small>SENA</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#convocatorias">Convocatorias</a></li>
+          <li><a href="#como-participar">Cómo participar</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Formación continua para instructores</p>
+          <h1 id="hero-title">Impulsa tu desarrollo como instructor del SENA</h1>
+          <p class="hero-lead">
+            Consulta las convocatorias de capacitación vigentes de la Escuela Nacional
+            de Instructores y fortalece tus competencias pedagógicas y técnicas.
+          </p>
+          <div class="hero-actions">
+            <a href="#convocatorias" class="btn btn-primary">Ver convocatorias</a>
+            <a href="#como-participar" class="btn btn-ghost">Cómo participar</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-circle"></div>
+          <div class="art-card">
+            <span class="art-badge">ENI</span>
+            <p>Aprender para enseñar mejor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONVOCATORIAS ============ -->
+    <section id="convocatorias" class="section" aria-labelledby="conv-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="conv-title">Convocatorias de capacitación</h2>
+          <p>Filtra por modalidad o busca por palabra clave para encontrar la formación ideal.</p>
+        </header>
+
+        <!-- Filtros -->
+        <div class="filters" role="search">
+          <label class="sr-only" for="search-input">Buscar convocatoria</label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="🔎 Buscar por nombre o área..."
+            autocomplete="off"
+          />
+          <div class="chips" role="tablist" aria-label="Filtrar por modalidad">
+            <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">Todas</button>
+            <button class="chip" data-filter="virtual" role="tab" aria-selected="false">Virtual</button>
+            <button class="chip" data-filter="presencial" role="tab" aria-selected="false">Presencial</button>
+            <button class="chip" data-filter="mixta" role="tab" aria-selected="false">Mixta</button>
+          </div>
+        </div>
+
+        <!-- Lista dinámica -->
+        <ul id="convocatorias-list" class="cards" aria-live="polite"></ul>
+
+        <p id="empty-state" class="empty-state" hidden>
+          No se encontraron convocatorias con esos criterios.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO PARTICIPAR ============ -->
+    <section id="como-participar" class="section section-alt" aria-labelledby="pasos-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="pasos-title">¿Cómo participar?</h2>
+          <p>Tres pasos simples para inscribirte en una convocatoria.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <h3>Explora</h3>
+            <p>Revisa las convocatorias disponibles y elige la que mejor se ajuste a tu perfil.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <h3>Inscríbete</h3>
+            <p>Haz clic en "Inscribirme" y completa el formulario con tus datos.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">3</span>
+            <h3>Capacítate</h3>
+            <p>Recibe confirmación y accede al material y a las sesiones programadas.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section id="contacto" class="section" aria-labelledby="contacto-title">
+      <div class="container contact-grid">
+        <div>
+          <h2 id="contacto-title">¿Necesitas más información?</h2>
+          <p>Escríbenos y nuestro equipo te orientará sobre el proceso de inscripción.</p>
+          <ul class="contact-list">
+            <li>📧 eni@sena.edu.co</li>
+            <li>📞 (601) 546 1500</li>
+            <li>📍 Bogotá D.C., Colombia</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" required />
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Escuela Nacional de Instructores - SENA. Todos los derechos reservados.</p>
+      <nav aria-label="Enlaces legales">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos de uso</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
